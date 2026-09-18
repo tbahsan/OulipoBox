@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OulipoBox — Constrained Writing Playground</title>
+    <meta
+      name="description"
+      content="Constrained creative writing playground for lipograms, univocalics, acrostics, and formal literary constraints. 100% client-side and offline ready."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <div class="logo-group">
+          <h1>
+            <span>OulipoBox</span>
+            <span class="logo-badge">v0.1.0</span>
+          </h1>
+          <p class="tagline">Constrained Writing Playground · Lipogram · Univocalic · Acrostic</p>
+        </div>
+        <div class="header-actions">
+          <button id="theme-toggle" class="btn-secondary" aria-label="Toggle theme">
+            <span id="theme-icon">☀️</span> <span id="theme-text">Light Mode</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <!-- Challenge / Presets Picker -->
+      <section class="card presets-section" aria-labelledby="presets-title">
+        <div class="section-title">
+          <h2 id="presets-title">Choose a Literary Constraint</h2>
+          <span id="category-badge" class="logo-badge" style="background: var(--bg-subtle); color: var(--text-muted)">Classic</span>
+        </div>
+        <div id="presets-container" class="preset-pills" role="tablist" aria-label="Constraints">
+          <!-- Dynamically populated from presets.json -->
+        </div>
+      </section>
+
+      <!-- Active Constraint Control Panel -->
+      <section class="card constraint-panel" aria-labelledby="active-constraint-name">
+        <div class="constraint-header">
+          <div>
+            <h3 id="active-constraint-name" class="constraint-name">E-less Lipogram</h3>
+            <p id="active-constraint-desc" class="constraint-desc">
+              Write without the letter 'E'. Inspired by Georges Perec's 'A Void'.
+            </p>
+          </div>
+          <button id="load-sample-btn" class="btn-secondary" title="Load sample compliant text">
+            ✨ Load Example
+          </button>
+        </div>
+        <div id="dynamic-controls" class="constraint-controls">
+          <!-- Dynamic inputs based on active constraint type -->
+        </div>
+      </section>
+
+      <!-- Real-time Status Banner -->
+      <section
+        id="status-banner"
+        class="status-banner valid"
+        role="status"
+        aria-live="polite"
+      >
+        <span id="status-message">Strict Lipogram achieved! Zero forbidden letters.</span>
+        <span id="status-badge" class="badge">Compliant</span>
+      </section>
+
+      <!-- Editor Section -->
+      <section class="editor-wrapper" aria-label="Text Editor">
+        <div class="editor-container">
+          <div class="editor-backdrop" aria-hidden="true">
+            <div id="editor-highlights"></div>
+          </div>
+          <textarea
+            id="editor-input"
+            class="editor-input"
+            placeholder="Type or paste your text here..."
+            spellcheck="false"
+            aria-label="Constrained writing text editor"
+          ></textarea>
+        </div>
+        <div class="editor-footer">
+          <div class="stats-group">
+            <span>Words: <strong id="stat-words">0</strong></span>
+            <span>Characters: <strong id="stat-chars">0</strong></span>
+            <span>Lines: <strong id="stat-lines">0</strong></span>
+          </div>
+          <div class="editor-actions">
+            <button id="copy-btn" class="btn-action" title="Copy clean text">📋 Copy</button>
+            <button id="download-txt-btn" class="btn-action" title="Download text file">💾 Download TXT</button>
+            <button id="clear-btn" class="btn-action" title="Clear editor">🗑️ Clear</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Diagnostics Panel -->
+      <section class="diagnostics-panel" aria-label="Diagnostics and Statistics">
+        <div class="card">
+          <h3 class="section-title">
+            <span>Rule Violations</span>
+            <span id="violation-count-badge" class="logo-badge" style="background: var(--error); color: #fff">0</span>
+          </h3>
+          <div id="violations-list" class="violations-list">
+            <p style="color: var(--text-muted); font-size: 0.85rem">No rule violations detected. Flawless constraint compliance!</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="section-title">
+            <span>Vowel &amp; Letter Frequency</span>
+          </h3>
+          <div id="letter-freq" class="freq-bars">
+            <!-- Vowels and top letters breakdown -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Privacy & Storage Policy -->
+      <section class="card privacy-box">
+        <label>
+          <input type="checkbox" id="opt-in-storage" />
+          <span>Save draft locally in this browser (LocalStorage)</span>
+        </label>
+        <div>
+          <button id="clear-draft-btn" class="btn-secondary" style="font-size: 0.78rem">
+            Delete Saved Draft
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>
+          OulipoBox — Client-side, offline-first constrained writing playground. Zero analytics, no server backend.
+        </p>
+        <p class="footer-credit">
+          Created by <a href="https://github.com/tbahsan" target="_blank" rel="noopener noreferrer">Tasneem Bin Ahsan</a> ·
+          <a href="https://github.com/tbahsan/OulipoBox" target="_blank" rel="noopener noreferrer">GitHub Repository</a> ·
+          MIT License
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

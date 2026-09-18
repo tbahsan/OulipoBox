@@ -1,0 +1,165 @@
+[
+  {
+    "id": "lipogram-no-e",
+    "name": "E-less Lipogram (Georges Perec)",
+    "nameBn": "ই-বিহীন লিপোগ্রাম (জর্জেস পেরেকের মতো)",
+    "category": "classic",
+    "description": "Write without the most common letter in English: 'E'. Inspired by Georges Perec's novel 'A Void'.",
+    "descriptionBn": "ইংরেজি ভাষার সবচেয়ে বেশি ব্যবহৃত বর্ণ 'E' সম্পূর্ণ বাদ দিয়ে লিখুন।",
+    "inspiration": "Georges Perec, La Disparition (A Void), 1969",
+    "config": {
+      "type": "lipogram",
+      "config": {
+        "forbiddenLetters": ["e"]
+      }
+    },
+    "sampleText": "A stout wild wolf runs past our farm. Birds chirp high on dry hills, singing crisp songs without a sound of wind."
+  },
+  {
+    "id": "lipogram-no-t-s",
+    "name": "Smooth Flow (No T, No S)",
+    "nameBn": "মসৃণ প্রবাহ (T ও S বিহীন)",
+    "category": "classic",
+    "description": "Write without dental and sibilant sounds 'T' and 'S'. Creates a remarkably flowing, soft tone.",
+    "descriptionBn": "T এবং S বর্ণ দুটি ছাড়া লিখুন। এটি লেখার গতিকে বিশেষ সুর দেয়।",
+    "inspiration": "Formal phonological constraint",
+    "config": {
+      "type": "lipogram",
+      "config": {
+        "forbiddenLetters": ["t", "s"]
+      }
+    },
+    "sampleText": "A cold rain fell on green loam, while my dog lay down by me and dreamed of joy."
+  },
+  {
+    "id": "univocalic-e",
+    "name": "Univocalic on E (Christian Bök)",
+    "nameBn": "একক স্বরবর্ণ: শুধু E",
+    "category": "poetic",
+    "description": "The only permitted vowel is 'E'. All other vowels (A, I, O, U) are forbidden. Y is treated as a consonant.",
+    "descriptionBn": "পুরো লেখায় শুধুমাত্র 'E' স্বরবর্ণ ব্যবহার করা যাবে। অন্য কোনো ভাওয়েল চলবে না।",
+    "inspiration": "Christian Bök, Eunoia (Chapter E), 2001",
+    "config": {
+      "type": "univocalic",
+      "config": {
+        "allowedVowel": "e",
+        "treatYAsVowel": false
+      }
+    },
+    "sampleText": "The green trees weep. Sweet breezes meet the deep red beets."
+  },
+  {
+    "id": "univocalic-a",
+    "name": "Univocalic on A",
+    "nameBn": "একক স্বরবর্ণ: শুধু A",
+    "category": "poetic",
+    "description": "The only permitted vowel is 'A'. All other vowels (E, I, O, U) are forbidden.",
+    "descriptionBn": "পুরো লেখায় শুধুমাত্র 'A' স্বরবর্ণ ব্যবহার করা যাবে।",
+    "inspiration": "Christian Bök, Eunoia (Chapter A), 2001",
+    "config": {
+      "type": "univocalic",
+      "config": {
+        "allowedVowel": "a",
+        "treatYAsVowel": false
+      }
+    },
+    "sampleText": "A tall man had a fast dark car. That man ran past a park as alarms rang."
+  },
+  {
+    "id": "univocalic-o",
+    "name": "Univocalic on O",
+    "nameBn": "একক স্বরবর্ণ: শুধু O",
+    "category": "poetic",
+    "description": "The only permitted vowel is 'O'. All other vowels (A, E, I, U) are forbidden.",
+    "descriptionBn": "পুরো লেখায় শুধুমাত্র 'O' স্বরবর্ণ ব্যবহার করা যাবে।",
+    "inspiration": "Christian Bök, Eunoia (Chapter O), 2001",
+    "config": {
+      "type": "univocalic",
+      "config": {
+        "allowedVowel": "o",
+        "treatYAsVowel": false
+      }
+    },
+    "sampleText": "Old Tom Fox got hot soup from Tom's pot on top of Cook's wood box."
+  },
+  {
+    "id": "acrostic-autumn",
+    "name": "Acrostic: AUTUMN",
+    "nameBn": "আদ্যক্ষর পঙ্‌ক্তি: AUTUMN",
+    "category": "poetic",
+    "description": "Each line of your verse must begin with the successive letters of the word 'AUTUMN'.",
+    "descriptionBn": "প্রতিটি লাইনের প্রথম বর্ণ হবে যথাক্রমে A, U, T, U, M, N।",
+    "inspiration": "Classical poetic constraint",
+    "config": {
+      "type": "acrostic",
+      "config": {
+        "targetWord": "AUTUMN"
+      }
+    },
+    "sampleText": "All golden leaves descend upon the ground,\nUnder cold gray skies of silent sound.\nTime marches swiftly through the falling chill,\nUnfolding whispers on the sleepy hill.\nMists gather slowly where the river gleams,\nNight brings its quiet gift of peaceful dreams."
+  },
+  {
+    "id": "wordcount-drabble",
+    "name": "Drabble (Exactly 100 Words)",
+    "nameBn": "ড্র্যাবল: ঠিক ১০০ শব্দ",
+    "category": "structural",
+    "description": "A complete narrative piece written in exactly 100 words. Not 99, not 101.",
+    "descriptionBn": "ঠিক ১০০ শব্দের একটি সম্পূর্ণ ছোট গল্প বা অনুচ্ছেদ।",
+    "inspiration": "Science fiction wordcraft tradition",
+    "config": {
+      "type": "wordcount",
+      "config": {
+        "mode": "exact",
+        "target": 100
+      }
+    },
+    "sampleText": "The traveler opened the heavy brass door and stepped inside the ancient tower. Dust danced in the golden light cutting across tall wooden bookshelves. Centuries of forgotten records rested here, undisturbed by human hands since the Great Reckoning. He pulled a slim leather volume from the third shelf and brushed away the gray ash coating its title. The ink within still glowed with a faint azure brilliance, humming softly against his fingertips. At last, he had found the map showing where the lost sun had fallen. He placed it carefully inside his satchel and stepped back into the eternal night."
+  },
+  {
+    "id": "wordcount-minisaga",
+    "name": "Mini-Saga (Exactly 50 Words)",
+    "nameBn": "মিনি-সাগা: ঠিক ৫০ শব্দ",
+    "category": "structural",
+    "description": "A complete micro-story told in precisely 50 words.",
+    "descriptionBn": "ঠিক ৫০ শব্দের একটি সম্পূর্ণ অনুগল্প।",
+    "inspiration": "The Telegraph Mini-Saga Competition",
+    "config": {
+      "type": "wordcount",
+      "config": {
+        "mode": "exact",
+        "target": 50
+      }
+    },
+    "sampleText": "She watched the tiny green shoot break through dry cracked stone. No rain had touched this parched valley for forty long months. Yet here was life, fragile and stubborn, reaching upward toward the blazing morning sky. Smiling through her tears, she tipped the last remaining drops of canteen water onto its roots."
+  },
+  {
+    "id": "alliteration-p",
+    "name": "Tautogram on P",
+    "nameBn": "আদ্যবর্ণ সমতা: P",
+    "category": "poetic",
+    "description": "Every single word in the composition must start with the letter 'P'.",
+    "descriptionBn": "প্রতিটি শব্দের শুরুর বর্ণ হতে হবে 'P'।",
+    "inspiration": "Classical Tautogram constraint",
+    "config": {
+      "type": "alliteration",
+      "config": {
+        "targetLetter": "p"
+      }
+    },
+    "sampleText": "Patient poets pen pretty prose passionately."
+  },
+  {
+    "id": "monosyllabic-verse",
+    "name": "Monosyllabic Craft (One-Syllable Words)",
+    "nameBn": "একাক্ষর শব্দ (Monosyllabic)",
+    "category": "poetic",
+    "description": "Every word must contain exactly one syllable. Polysyllabic words are flagged.",
+    "descriptionBn": "প্রতিটি শব্দ হতে হবে এক সিলেবলের (একাক্ষর)।",
+    "inspiration": "Formal phonotactic constraint",
+    "config": {
+      "type": "monosyllabic",
+      "config": {}
+    },
+    "sampleText": "The sun rose high and gave warm light to all the land as cold mist fled from the green grass."
+  }
+]
